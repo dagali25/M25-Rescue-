@@ -11,11 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0d6efd;
-            --secondary: #ff6a00;
+            --primary: #000000;   /* Black */
+            --secondary: #FFD700; /* Yellow */
+            --accent: #FFED4E;    /* Light yellow */
             --dark: #212529;
-            --light: #f8f9fa;
+            --light: #ffffff;     /* White */
             --gray: #6c757d;
+            --dark-bg: #1a1a1a;   /* Dark background */
         }
         
         * {
@@ -28,7 +30,7 @@
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: var(--dark);
-            background-color: #fff;
+            background-color: var(--light);
             padding-top: 80px; /* Account for fixed header */
         }
         
@@ -60,7 +62,7 @@
             display: inline-block;
             padding: 12px 24px;
             background-color: var(--secondary);
-            color: white;
+            color: var(--primary);
             border: none;
             border-radius: 4px;
             font-weight: 600;
@@ -71,9 +73,9 @@
         
         .btn:hover {
             background-color: var(--primary);
-            color: white;
+            color: var(--secondary);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .btn-outline {
@@ -84,18 +86,19 @@
 
         .btn-outline:hover {
             background-color: var(--secondary);
-            color: white;
+            color: var(--primary);
         }
         
         /* Header with disappearing functionality */
         header {
-            background-color: white;
+            background-color: var(--light);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             transition: transform 0.3s ease;
+            border-bottom: 2px solid var(--secondary);
         }
         
         .header-hidden {
@@ -135,7 +138,7 @@
         }
         
         .nav-menu a {
-            color: var(--dark);
+            color: var(--primary);
             font-weight: 600;
             font-size: 16px;
         }
@@ -154,16 +157,17 @@
 
         .phone-number i {
             margin-right: 8px;
+            color: var(--secondary);
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1599921841143-8190654baa0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1599921841143-8190654baa0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
             height: 80vh;
             display: flex;
             align-items: center;
             text-align: center;
-            color: white;
+            color: var(--light);
         }
         
         .hero-content {
@@ -174,7 +178,7 @@
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1.5rem;
-            color: white;
+            color: var(--light);
         }
         
         .hero p {
@@ -225,18 +229,20 @@
         }
         
         .service-card {
-            background-color: white;
+            background-color: var(--light);
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
+            border: 1px solid #eee;
         }
         
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            border-color: var(--secondary);
         }
         
         .service-img {
@@ -245,7 +251,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: var(--secondary);
             font-size: 60px;
         }
         
@@ -259,6 +265,7 @@
         .service-content h3 {
             font-size: 1.5rem;
             margin-bottom: 15px;
+            color: var(--primary);
         }
 
         .service-content p {
@@ -269,6 +276,12 @@
         /* About */
         .about {
             padding: 80px 0;
+            background-color: var(--dark-bg);
+            color: var(--light);
+        }
+        
+        .about h2, .about h4 {
+            color: var(--light);
         }
         
         .about-content {
@@ -294,8 +307,8 @@
         }
         
         .feature-icon {
-            background-color: var(--primary);
-            color: white;
+            background-color: var(--secondary);
+            color: var(--primary);
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -339,6 +352,7 @@
             overflow: hidden;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 2px solid var(--secondary);
         }
         
         .map-container iframe {
@@ -358,6 +372,12 @@
         /* Testimonials */
         .testimonials {
             padding: 80px 0;
+            background-color: var(--dark-bg);
+            color: var(--light);
+        }
+        
+        .testimonials h2, .testimonials h4 {
+            color: var(--light);
         }
         
         .testimonials-grid {
@@ -367,10 +387,11 @@
         }
         
         .testimonial-card {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: 8px;
             padding: 30px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--secondary);
         }
         
         .testimonial-text {
@@ -387,12 +408,12 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background-color: var(--primary);
+            background-color: var(--secondary);
             margin-right: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: var(--primary);
             font-weight: bold;
         }
 
@@ -405,13 +426,13 @@
         .cta-section {
             padding: 80px 0;
             background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
-            color: white;
+            color: var(--light);
             text-align: center;
         }
         
         .cta-section h2 {
             font-size: 2.5rem;
-            color: white;
+            color: var(--light);
             margin-bottom: 20px;
         }
         
@@ -432,14 +453,15 @@
         
         /* Emergency CTA Bar */
         .emergency-bar {
-            background-color: var(--secondary);
-            color: white;
+            background-color: var(--primary);
+            color: var(--light);
             padding: 15px 0;
             text-align: center;
             position: fixed;
             bottom: 0;
             width: 100%;
             z-index: 999;
+            border-top: 2px solid var(--secondary);
         }
 
         .emergency-bar-content {
@@ -456,12 +478,13 @@
         .emergency-phone {
             font-size: 1.3rem;
             font-weight: 700;
+            color: var(--secondary);
         }
         
         /* Footer */
         footer {
-            background-color: var(--dark);
-            color: white;
+            background-color: var(--primary);
+            color: var(--light);
             padding: 60px 0 100px;
         }
         
@@ -473,7 +496,7 @@
         }
         
         .footer-column h3 {
-            color: white;
+            color: var(--secondary);
             margin-bottom: 20px;
             font-size: 1.5rem;
         }
@@ -491,7 +514,7 @@
         }
         
         .footer-links a:hover {
-            color: white;
+            color: var(--secondary);
         }
         
         .contact-info {
@@ -593,7 +616,7 @@
         .menu-toggle span {
             width: 100%;
             height: 3px;
-            background-color: var(--dark);
+            background-color: var(--primary);
             border-radius: 5px;
             transition: all 0.3s linear;
         }
@@ -810,19 +833,19 @@
                     <!-- Simple M25 map representation -->
                     <div style="width: 100%; height: 100%; background: #e9ecef; display: flex; align-items: center; justify-content: center;">
                         <div style="text-align: center; padding: 20px;">
-                            <i class="fas fa-map-marked-alt" style="font-size: 48px; color: #0d6efd; margin-bottom: 15px;"></i>
+                            <i class="fas fa-map-marked-alt" style="font-size: 48px; color: #000; margin-bottom: 15px;"></i>
                             <h3>M25 Corridor Coverage Map</h3>
                             <p>We cover all areas within and around the M25 motorway</p>
                             <div style="margin-top: 20px;">
                                 <ul style="columns: 2; list-style: none;">
-                                    <li><i class="fas fa-check" style="color: #28a745;"></i> All M25 junctions</li>
-                                    <li><i class="fas fa-check" style="color: #28a745;"></i> Within 20 miles of M25</li>
-                                    <li><i class="fas fa-check" style="color: #28a745;"></i> North London areas</li>
-                                    <li><i class="fas fa-check" style="color: #28a745;"></i> South London areas</li>
-                                    <li><i class="fas fa-check" style="color: #28a745;"></i> Essex areas</li>
-                                    <li><i class="fas fa-check" style="color: #28a745;"></i> Kent areas</li>
-                                    <li><i class="fas fa-check" style="color: #28a745;"></i> Surrey areas</li>
-                                    <li><i class="fas fa-check" style="color: #28a745;"></i> Hertfordshire areas</li>
+                                    <li><i class="fas fa-check" style="color: #FFD700;"></i> All M25 junctions</li>
+                                    <li><i class="fas fa-check" style="color: #FFD700;"></i> Within 20 miles of M25</li>
+                                    <li><i class="fas fa-check" style="color: #FFD700;"></i> North London areas</li>
+                                    <li><i class="fas fa-check" style="color: #FFD700;"></i> South London areas</li>
+                                    <li><i class="fas fa-check" style="color: #FFD700;"></i> Essex areas</li>
+                                    <li><i class="fas fa-check" style="color: #FFD700;"></i> Kent areas</li>
+                                    <li><i class="fas fa-check" style="color: #FFD700;"></i> Surrey areas</li>
+                                    <li><i class="fas fa-check" style="color: #FFD700;"></i> Hertfordshire areas</li>
                                 </ul>
                             </div>
                         </div>
