@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M25 Recovery Solutions | Classic Breakdown & Recovery Service</title>
-    <meta name="description" content="24/7 professional breakdown recovery services around the M25 corridor. Fast response, reliable service, and competitive pricing.">
-    <meta name="keywords" content="M25 recovery, breakdown cover, vehicle recovery, car recovery M25, van recovery, roadside assistance">
+    <title>M25 Recovery Solutions | 24/7 Vehicle Recovery Services</title>
+    <meta name="description" content="24/7 professional vehicle recovery services near the M25 corridor. Fast response, M25 area coverage, and affordable rates.">
+    <meta name="keywords" content="M25 recovery, vehicle recovery, breakdown recovery, car recovery M25">
     <meta name="author" content="M25 Recovery Solutions">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #FFCC00;
-            --secondary: #000000;
-            --accent: #333333;
-            --light: #f8f8f8;
-            --gray: #666666;
-            --white: #ffffff;
+            --primary: #0d6efd;
+            --secondary: #ff6a00;
+            --dark: #212529;
+            --light: #f8f9fa;
+            --gray: #6c757d;
         }
         
         * {
@@ -26,27 +25,28 @@
         }
         
         body {
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
-            color: var(--accent);
-            background-color: var(--white);
+            color: var(--dark);
+            background-color: #fff;
+            padding-top: 80px; /* Account for fixed header */
         }
         
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             margin-bottom: 1rem;
-            color: var(--secondary);
+            color: var(--dark);
         }
         
         a {
             text-decoration: none;
-            color: var(--secondary);
+            color: var(--primary);
             transition: all 0.3s ease;
         }
         
         a:hover {
-            color: var(--primary);
+            color: var(--secondary);
         }
         
         .container {
@@ -58,45 +58,48 @@
         
         .btn {
             display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--primary);
-            color: var(--secondary);
+            padding: 12px 24px;
+            background-color: var(--secondary);
+            color: white;
             border: none;
             border-radius: 4px;
-            font-weight: 700;
+            font-weight: 600;
             text-transform: uppercase;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         
         .btn:hover {
-            background-color: var(--secondary);
-            color: var(--primary);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .btn-outline {
             background-color: transparent;
-            border: 2px solid var(--primary);
+            border: 2px solid var(--secondary);
             color: var(--secondary);
         }
 
         .btn-outline:hover {
-            background-color: var(--primary);
-            color: var(--secondary);
+            background-color: var(--secondary);
+            color: white;
         }
         
-        /* Header */
+        /* Header with disappearing functionality */
         header {
-            background-color: var(--secondary);
-            color: var(--white);
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .header-hidden {
+            transform: translateY(-100%);
         }
         
         .header-container {
@@ -119,7 +122,7 @@
         }
         
         .logo-text span {
-            color: var(--white);
+            color: var(--secondary);
         }
         
         .nav-menu {
@@ -132,13 +135,13 @@
         }
         
         .nav-menu a {
-            color: var(--white);
+            color: var(--dark);
             font-weight: 600;
             font-size: 16px;
         }
         
         .nav-menu a:hover {
-            color: var(--primary);
+            color: var(--secondary);
         }
         
         .phone-number {
@@ -151,18 +154,16 @@
 
         .phone-number i {
             margin-right: 8px;
-            color: var(--white);
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1599921841143-8190654baa0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
             height: 80vh;
             display: flex;
             align-items: center;
             text-align: center;
-            color: var(--white);
-            padding-top: 80px;
+            color: white;
         }
         
         .hero-content {
@@ -173,7 +174,7 @@
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1.5rem;
-            color: var(--white);
+            color: white;
         }
         
         .hero p {
@@ -214,13 +215,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background-color: var(--primary);
-        }
-
-        .section-title p {
-            color: var(--gray);
-            max-width: 600px;
-            margin: 0 auto;
+            background-color: var(--secondary);
         }
         
         .services-grid {
@@ -230,12 +225,13 @@
         }
         
         .service-card {
-            background-color: var(--white);
+            background-color: white;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
         }
         
         .service-card:hover {
@@ -249,23 +245,25 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--secondary);
+            color: white;
             font-size: 60px;
         }
         
         .service-content {
             padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
         
         .service-content h3 {
             font-size: 1.5rem;
             margin-bottom: 15px;
-            color: var(--secondary);
         }
 
         .service-content p {
-            color: var(--gray);
             margin-bottom: 20px;
+            flex-grow: 1;
         }
         
         /* About */
@@ -285,11 +283,6 @@
             margin-bottom: 20px;
         }
         
-        .about-text p {
-            color: var(--gray);
-            margin-bottom: 20px;
-        }
-        
         .about-features {
             margin-top: 30px;
         }
@@ -297,20 +290,19 @@
         .feature {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         
         .feature-icon {
             background-color: var(--primary);
-            color: var(--secondary);
-            width: 50px;
-            height: 50px;
+            color: white;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-right: 15px;
-            font-size: 20px;
         }
         
         .about-image {
@@ -347,59 +339,15 @@
             overflow: hidden;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            background-color: var(--white);
         }
         
-        .map-content {
+        .map-container iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .map-content i {
-            font-size: 48px;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-
-        .map-content h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-
-        .map-content p {
-            color: var(--gray);
-            margin-bottom: 20px;
-        }
-
-        .coverage-list {
-            columns: 2;
-            list-style: none;
-            text-align: left;
-            margin: 0 auto;
-            max-width: 500px;
-        }
-
-        .coverage-list li {
-            margin-bottom: 10px;
-            color: var(--gray);
-            position: relative;
-            padding-left: 25px;
-        }
-
-        .coverage-list li:before {
-            content: '✓';
-            color: var(--primary);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
+            border: 0;
         }
 
         .coverage-cta {
@@ -419,7 +367,7 @@
         }
         
         .testimonial-card {
-            background-color: var(--white);
+            background-color: white;
             border-radius: 8px;
             padding: 30px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -428,18 +376,6 @@
         .testimonial-text {
             font-style: italic;
             margin-bottom: 20px;
-            color: var(--gray);
-            position: relative;
-        }
-
-        .testimonial-text:before {
-            content: '"';
-            font-size: 50px;
-            color: var(--primary);
-            opacity: 0.3;
-            position: absolute;
-            top: -20px;
-            left: -10px;
         }
         
         .testimonial-author {
@@ -456,7 +392,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--secondary);
+            color: white;
             font-weight: bold;
         }
 
@@ -469,14 +405,14 @@
         .cta-section {
             padding: 80px 0;
             background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
-            color: var(--white);
+            color: white;
             text-align: center;
         }
         
         .cta-section h2 {
             font-size: 2.5rem;
+            color: white;
             margin-bottom: 20px;
-            color: var(--white);
         }
         
         .cta-section p {
@@ -497,7 +433,7 @@
         /* Emergency CTA Bar */
         .emergency-bar {
             background-color: var(--secondary);
-            color: var(--white);
+            color: white;
             padding: 15px 0;
             text-align: center;
             position: fixed;
@@ -515,19 +451,17 @@
         .emergency-text {
             font-size: 1.2rem;
             font-weight: 600;
-            color: var(--primary);
         }
 
         .emergency-phone {
             font-size: 1.3rem;
             font-weight: 700;
-            color: var(--primary);
         }
         
         /* Footer */
         footer {
-            background-color: var(--secondary);
-            color: var(--white);
+            background-color: var(--dark);
+            color: white;
             padding: 60px 0 100px;
         }
         
@@ -539,7 +473,7 @@
         }
         
         .footer-column h3 {
-            color: var(--primary);
+            color: white;
             margin-bottom: 20px;
             font-size: 1.5rem;
         }
@@ -553,11 +487,11 @@
         }
         
         .footer-links a {
-            color: var(--white);
+            color: #ccc;
         }
         
         .footer-links a:hover {
-            color: var(--primary);
+            color: white;
         }
         
         .contact-info {
@@ -572,14 +506,14 @@
         
         .contact-info i {
             margin-right: 10px;
-            color: var(--primary);
+            color: var(--secondary);
         }
         
         .copyright {
             text-align: center;
             padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--white);
+            border-top: 1px solid #444;
+            color: #ccc;
             font-size: 14px;
         }
 
@@ -629,7 +563,7 @@
             
             .hero {
                 height: auto;
-                padding: 120px 0 60px;
+                padding: 60px 0;
             }
 
             .hero-buttons {
@@ -641,20 +575,70 @@
                 flex-direction: column;
                 align-items: center;
             }
+        }
 
-            .coverage-list {
-                columns: 1;
+        /* Mobile menu toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .menu-toggle span {
+            width: 100%;
+            height: 3px;
+            background-color: var(--dark);
+            border-radius: 5px;
+            transition: all 0.3s linear;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            .nav-menu {
+                display: none;
+                width: 100%;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .phone-number {
+                margin-top: 15px;
             }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header id="main-header">
         <div class="container header-container">
             <div class="logo">
                 <div class="logo-text">M25 <span>Recovery Solutions</span></div>
             </div>
+            
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
@@ -674,10 +658,10 @@
     <section class="hero" id="home">
         <div class="container hero-content">
             <h1>24/7 Vehicle Recovery Services Around the M25</h1>
-            <p>Reliable, professional breakdown cover when you need it most</p>
+            <p>Fast, reliable recovery services when you need them most</p>
             
             <div class="hero-buttons">
-                <a href="tel:08001234567" class="btn"><i class="fas fa-phone"></i> Call For Assistance</a>
+                <a href="tel:08001234567" class="btn"><i class="fas fa-phone"></i> Call Now For Assistance</a>
                 <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Get a Quote</a>
             </div>
         </div>
@@ -688,7 +672,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Our Services</h2>
-                <p>Comprehensive breakdown and recovery solutions for all situations</p>
+                <p>We provide comprehensive recovery solutions for all situations</p>
             </div>
             
             <div class="services-grid">
@@ -807,7 +791,7 @@
                 </div>
                 
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="M25 Recovery Solutions Vehicle">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="M25 Recovery Solutions Vehicle">
                 </div>
             </div>
         </div>
@@ -823,21 +807,25 @@
             
             <div class="coverage-map">
                 <div class="map-container">
-                    <div class="map-content">
-                        <i class="fas fa-map-marked-alt"></i>
-                        <h3>M25 CORRIDOR COVERAGE</h3>
-                        <p>We cover all areas within and around the M25 motorway</p>
-                        
-                        <ul class="coverage-list">
-                            <li>All M25 junctions</li>
-                            <li>Within 20 miles of M25</li>
-                            <li>North London areas</li>
-                            <li>South London areas</li>
-                            <li>Essex areas</li>
-                            <li>Kent areas</li>
-                            <li>Surrey areas</li>
-                            <li>Hertfordshire areas</li>
-                        </ul>
+                    <!-- Simple M25 map representation -->
+                    <div style="width: 100%; height: 100%; background: #e9ecef; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-map-marked-alt" style="font-size: 48px; color: #0d6efd; margin-bottom: 15px;"></i>
+                            <h3>M25 Corridor Coverage Map</h3>
+                            <p>We cover all areas within and around the M25 motorway</p>
+                            <div style="margin-top: 20px;">
+                                <ul style="columns: 2; list-style: none;">
+                                    <li><i class="fas fa-check" style="color: #28a745;"></i> All M25 junctions</li>
+                                    <li><i class="fas fa-check" style="color: #28a745;"></i> Within 20 miles of M25</li>
+                                    <li><i class="fas fa-check" style="color: #28a745;"></i> North London areas</li>
+                                    <li><i class="fas fa-check" style="color: #28a745;"></i> South London areas</li>
+                                    <li><i class="fas fa-check" style="color: #28a745;"></i> Essex areas</li>
+                                    <li><i class="fas fa-check" style="color: #28a745;"></i> Kent areas</li>
+                                    <li><i class="fas fa-check" style="color: #28a745;"></i> Surrey areas</li>
+                                    <li><i class="fas fa-check" style="color: #28a745;"></i> Hertfordshire areas</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -967,7 +955,7 @@
     <script>
         // Hide header on scroll down, show on scroll up
         let lastScrollTop = 0;
-        const header = document.querySelector('header');
+        const header = document.getElementById('main-header');
         const headerHeight = header.offsetHeight;
         
         window.addEventListener('scroll', function() {
@@ -975,10 +963,10 @@
             
             if (scrollTop > lastScrollTop && scrollTop > headerHeight) {
                 // Scroll down
-                header.style.transform = 'translateY(-100%)';
+                header.classList.add('header-hidden');
             } else {
                 // Scroll up
-                header.style.transform = 'translateY(0)';
+                header.classList.remove('header-hidden');
             }
             
             lastScrollTop = scrollTop;
@@ -995,10 +983,27 @@
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 80,
+                        top: targetElement.offsetTop - 100,
                         behavior: 'smooth'
                     });
                 }
+            });
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
             });
         });
     </script>
